@@ -7,6 +7,20 @@
 - [Installation](#installation)
     - [CD](#cd)
     - [USB](#usb)
-    
-## Installation
+- [Setup]
+    - [Root Login]
+    - [New User]
+    - [Root Privileges]
+    - [Public Key Authentication]
+        - [ssh-copy-id]
+        - [manually]
+- [Software Essentials]
+    - [vim]
+- [Configuration]
+    - [SSH Daemon]
+    - [Networking]
+    - [SELinux]
+    - [Firewall]
+- [Additional Steps]
+    - [Mounting Additional Drive]
 
