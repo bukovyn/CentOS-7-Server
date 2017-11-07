@@ -1,4 +1,4 @@
-# CentOS-7-Server
+![CentOS](/CentOS-7-server/img/CentOSLogo.png)
 
 #### A guide to configuring a minimal install of CentOS to set up a local server.
 
