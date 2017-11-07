@@ -7,20 +7,20 @@
 - [Installation](#installation)
     - [CD](#cd)
     - [USB](#usb)
-- [Setup]
-    - [Root Login]
-    - [New User]
-    - [Root Privileges]
-    - [Public Key Authentication]
-        - [ssh-copy-id]
-        - [manually]
-- [Software Essentials]
-    - [vim]
-- [Configuration]
-    - [SSH Daemon]
-    - [Networking]
-    - [SELinux]
-    - [Firewall]
-- [Additional Steps]
-    - [Mounting Additional Drive]
+- [Setup](#setup)
+    - [Root Login](#root-login)
+    - [New User](#new-user)
+    - [Root Privileges](#root-privileges)
+    - [Public Key Authentication](#public-key)
+        - [ssh-copy-id](#ssh-copy-id)
+        - [manually](#manually)
+- [Software Essentials]9#software-essentials)
+    - [vim](#vim)
+- [Configuration](#configuration)
+    - [SSH Daemon](#sshd)
+    - [Networking](#networking)
+    - [SELinux](#selinux)
+    - [Firewall](#firewall)
+- [Additional Steps](#additional-steps)
+    - [Mounting Additional Drives](#mounting-additional-drives)
 
