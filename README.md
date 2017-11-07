@@ -14,7 +14,7 @@
     - [Public Key Authentication](#public-key)
         - [ssh-copy-id](#ssh-copy-id)
         - [manually](#manually)
-- [Software Essentials]9#software-essentials)
+- [Software Essentials](#software-essentials)
     - [vim](#vim)
 - [Configuration](#configuration)
     - [SSH Daemon](#sshd)
