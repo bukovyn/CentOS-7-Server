@@ -1,4 +1,4 @@
-![CentOS](/CentOS-7-server/img/CentOSLogo.png)
+![CentOS](https://github.com/bukovyn/CentOS-7-Server/blob/master/img/CentOSLogo.png)
 
 #### A guide to configuring a minimal install of CentOS to set up a local server.
 
