@@ -121,7 +121,12 @@ The new drive is recognized as /dev/sdb.
 
 Now we must create one or more partitions on the disk. In order to partition the new drive `/dev/sdb`, we can use the [`fdisk`](http://www.tldp.org/HOWTO/Partition/fdisk_partitioning.html) command `fdisk /dev/sdb`.
 
-Once the `fdisk` command line has been prompted:
+Running `fdisk`:
+```sh
+Command (m for help):
+```
+
+`p` shows our drives partitions, as you can see, there are currently none.
 ```sh
 Command (m for help): p
 
@@ -134,7 +139,6 @@ Disk identifier: 0x8ac86c1a
 
    Device Boot      Start         End      Blocks   Id  System
 ```
-`p` shows our drives partitions, as you can see, there are currently none.
 
 To create a new partition, we run `n`:
 ```sh
@@ -157,7 +161,6 @@ Then we are prompted for a partition number, it is best to go by default and pre
 Lastly, we are prompted for partition size, this is entirely up to you and the purpose of your drive. For examples sake, if you wanted one partition that used all the space on your new drive, simply press `Enter` twice with no input as this will default to the first available block to the last available block.
 
 The last step is to write the specified partition to the disk by typing `w`:
-
 ```sh
 Command (m for help): w
 The partition table has been altered!
@@ -166,7 +169,6 @@ Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
 Running `ls /dev/sd*` (the command used to see devices which we ran earlier), we can now see the new partition as `dev/sdb1`:
-
 ```sh
 ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/hsdb  /dev/sb1  /dev/sdc
