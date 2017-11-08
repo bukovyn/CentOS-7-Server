@@ -4,7 +4,7 @@
 
 #### A guide (in progress) to configuring a minimal install of CentOS to set up a local server.
 
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents**
 
 - [Installation](#installation)
     - [CD](#cd)
@@ -16,8 +16,6 @@
     - [Public Key Authentication](#public-key)
         - [ssh-copy-id](#ssh-copy-id)
         - [manually](#manually)
-- [Software Essentials](#software-essentials)
-    - [vim](#vim)
 - [Configuration](#configuration)
     - [SSH Daemon](#sshd)
     - [Networking](#networking)
@@ -62,12 +60,6 @@
 
 <a name="manually"></a>
 #### Manually
-
-<a name="software-essentials"></a> 
-## Software Essentials
-
-<a name="vim"></a> 
-### Vim
 
 <a name="configuration"></a> 
 ## Configuration
