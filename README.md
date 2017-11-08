@@ -133,7 +133,7 @@ Disk identifier: 0x8ac86c1a
 
    Device Boot      Start         End      Blocks   Id  System
 ```
-*Note: If this drive has previous partitions on it which you would like to get rid of, `d` deletes a partition, after deleting selected partition(s) `w` writes the modification to the disk.*
+*Note: If this drive has previous partitions on it which you would like to get rid of, `d` deletes a partition, after deletion, `w` writes the modification to the disk.*
 
 *WARNING: Deleting a partition and writing it to the disk is a permanent action, your data will be lost. Think twice before deleting a partition.*
 
