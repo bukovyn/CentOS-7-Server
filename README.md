@@ -135,7 +135,7 @@ Disk identifier: 0x8ac86c1a
 ```
 *Note: If this drive has previous partitions on it which you would like to get rid of, `d` deletes a partition, after deletion, `w` writes the modification to the disk.*
 
-*WARNING: Deleting a partition and writing it to the disk is a permanent action, your data will be lost. Think twice before deleting a partition.*
+*WARNING: Deleting a partition and writing it to the disk is a "semi"-permanent action, techincally you can recover the deleted partition data but it is more trouble than it's worth. Think twice before deleting a partition.*
 
 To create a new partition, we run `n`:
 ```
