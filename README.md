@@ -97,7 +97,7 @@ The following command shows the output with only ony physical drive on the syste
 ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/sdc
 ```
-*Note: If you get the error -* `ls: cannot access /dev/sd*: No such file or directory`. *Try* `ls /dev/hd*`
+*Note: If you get the error - `ls: cannot access /dev/sd*: No such file or directory`. Try `ls /dev/hd*`*
 
 This shows the disk drive `/dev/sda` as well as two of it's partitions, `/dev/sda1` and `/dev/sda2`. In this case, `/dev/sdc` is the CD-ROM. Most of the time, when a new drive is added it will be assigned to `/dev/sdb`.
 
@@ -108,7 +108,7 @@ ls /dev/sd*
 ```
 The new drive is recognized as `/dev/sdb`.
 
-*Note: /dev/sdb currently has no partitions shown, which we must create along with file systems and then mount them for access. This is explained in the following steps.*
+*Note: `/dev/sdb` currently has no partitions shown, which we must create along with file systems and then mount them for access. This is explained in the following steps.*
 
 <a name="creating-linux-partitions"></a> 
 #### Creating Linux Partition(s)
@@ -190,7 +190,7 @@ Once this directory exists, we can manually mount the filesystem using... you gu
 mount /dev/sdb1 /mydata
 ```
 
-*Tip: Running the* `mount` *command with no arguments shows all currently mounted file systems.*
+*Tip: Running the `mount` command with no arguments shows all currently mounted file systems.*
 
 <a name="automount-file-system"></a> 
 #### Automount File System On Boot
@@ -206,7 +206,7 @@ or
 ```
 vim /etc/fstab
 ```
-*Note: install* `vim` *by running* `yum -y install vim`. `vim` *is an enhanced version of the default* `vi` *that comes with the operating system.*
+*Note: install `vim` by running `yum -y install vim`. `vim` is an enhanced version of the default `vi` that comes with the operating system.*
 
 The following is a sample output of the fstab file configured to automount our /mydata partition:
 ```
