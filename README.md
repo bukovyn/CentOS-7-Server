@@ -113,6 +113,7 @@ ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/sdb  /dev/sdc
 ```
 The new drive is recognized as /dev/sdb.
+
 Note, /dev/sdb currently has no partitions shown, which we must create along with file systems and then mount them for access. This is explained in the following steps.
 
 <a name="creating-linux-partitions"></a> 
