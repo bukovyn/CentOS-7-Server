@@ -119,6 +119,59 @@ The new drive is recognized as /dev/sdb.
 <a name="creating-linux-partitions"></a> 
 #### Creating Linux Partition(s)
 
+Now we must create one or more partitions on the disk. In order to partition the new drive `/dev/sdb`, we can use the [`fdisk`](http://www.tldp.org/HOWTO/Partition/fdisk_partitioning.html) command `fdisk /dev/sdb`.
+
+Once the `fdisk` command line has been prompted:
+```sh
+Command (m for help): p
+
+Disk /dev/sda: 640.1 GB, 640135028736 bytes, 1250263728 sectors
+Units = sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk label type: dos
+Disk identifier: 0x8ac86c1a
+
+   Device Boot      Start         End      Blocks   Id  System
+```
+`p` shows our drives partitions, as you can see, there are currently none.
+
+To create a new partition, we run `n`:
+```sh
+Command (m for help): n
+Partition type:
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended
+Select (default p): p
+Partition number (1-4, default 1):
+First sector (2048-1250263727, default 2048):
+Using default value 2048
+Last sector, +sectors or +size{K,M,G} (2048-1250263727, default 1250263727):
+Using default value 1250263727
+Partition 1 of type Linux and of size 596.2 GiB is set
+```
+Here we can either select `p` for a primary partition type or `e` for an extended partition type. Since it is an empty drive, we select a primary partition type.
+
+Then we are prompted for a partition number, it is best to go by default and press `Enter` with no input. 
+
+Lastly, we are prompted for partition size, this is entirely up to you and the purpose of your drive. For examples sake, if you wanted one partition that used all the space on your new drive, simply press `Enter` twice with no input as this will default to the first available block to the last available block.
+
+The last step is to write the specified partition to the disk by typing `w`:
+
+```sh
+Command (m for help): w
+The partition table has been altered!
+
+Calling ioctl() to re-read partition table.
+Syncing disks.
+```
+Running `ls /dev/sd*` (the command used to see devices which we ran earlier), we can now see the new partition as `dev/sdb1`:
+
+```sh
+ls /dev/sd*
+/dev/sda  /dev/sda1  /dev/sda2  /dev/hsdb  /dev/sb1  /dev/sdc
+```
+The next step is to create a file system on our newly made partition.
 
 <a name="creating-file-system"></a> 
 #### Creating File System
