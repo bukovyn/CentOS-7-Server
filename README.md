@@ -178,8 +178,25 @@ The next step is to create a file system on our newly made partition.
 <a name="creating-file-system"></a> 
 #### Creating File System
 
+The easiest way to create a file system on a partition is to use the [`mkfs.ext3`](https://linux.die.net/man/8/mkfs.ext3) utility. 
+```
+/sbin/mkfs.ext3 -L /mydata /dev/sdb1
+```
+This will create a file system on the specified disk partition, in our case `/dev/sdb1` with the label "mydata".
+
 <a name="mounting-file-system"></a> 
 #### Mounting File System
+
+After we have created the new file system on our disk's partition, we need to mount it in order for it to be accessible to CentOS and its users. For this to be possible, we must create a mount point, which is a directory or folder into which the file system will be mounted. To keep it simple we will create a /mydata directory to match our file system label, keep in mind it is not necessary that these values match:
+```
+mkdir /mydata
+```
+Once this directory exists, we can manually mount the filesystem using... you guess it! The [`mount`](http://man7.org/linux/man-pages/man8/mount.8.html) command.
+```
+mount /dev/sdb1 /mydata
+```
+
+*Tip: Running the `mount` command with no arguments shows all currently monuted file systems.*
 
 <a name="automount-file-system"></a> 
 #### Automount File System On Boot
