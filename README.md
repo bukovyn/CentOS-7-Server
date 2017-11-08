@@ -87,7 +87,7 @@ You can download CentOS [here](https://www.centos.org/download/). This guide fol
 <a name="assumptions"></a> 
 #### Assumptions
 
-The following steps assume that the new drive has been installed and is recognized by the system. A good way to verify this is to enter the BIOS during the system's boot process and ensure that the drive is recognized by the BIOS. If it is not recognized, the BIOS may have a menu option to scan for new drives. If this does not help or the scan for new drives option does not exist on your system, double check the phsyical aspects of the drive and make sure it is connected properly.
+The following steps assume that the new drive has been installed and is recognized by the system. A good way to verify this is to enter the BIOS during the system's boot process and ensure that the drive is recognized by the BIOS. If it is not recognized, the BIOS may have a menu option to scan for new drives. If this does not help or the scan for new drives option does not exist on your system, double check the physical aspects of the drive and make sure it is connected properly.
 
 <a name="finding-your-drive"></a> 
 #### Finding Your Drive
