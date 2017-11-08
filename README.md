@@ -226,7 +226,7 @@ LABEL=/mydata           /mydata                 ext3    defaults        1 2
 **Only the last line is important.** 
 With this configuration line added to the fstab file, the file system will now automount on the next system boot. 
 
-...And there it is, anything stored in the `/mydata` directory will be stored on the new disk's memory!
+...and there it is, anything stored in the `/mydata` directory will be stored on the new disk's memory!
 
 
 
