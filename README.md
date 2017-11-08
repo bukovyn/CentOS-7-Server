@@ -201,6 +201,33 @@ mount /dev/sdb1 /mydata
 <a name="automount-file-system"></a> 
 #### Automount File System On Boot
 
+For the new file system to be automatically mounted at boot time, an entry needs to be appended to the `/etc/fstab` file.
+
+Simply run:
+
+```
+vi /etc/fstab 
+```
+or
+```
+vim /etc/fstab
+```
+*Note: install `vim` by running `yum -y install vim`. `vim` is an enhanced version of the default `vi` that comes with the operating system.*
+
+The following is a sample output of the fstab file configured to automount our /mydata partition:
+```
+/dev/VolGroup00/LogVol00 /                      ext3    defaults        1 1
+LABEL=/boot             /boot                   ext3    defaults        1 2
+tmpfs                   /dev/shm                tmpfs   defaults        0 0
+devpts                  /dev/pts                devpts  gid=5,mode=620  0 0
+sysfs                   /sys                    sysfs   defaults        0 0
+proc                    /proc                   proc    defaults        0 0
+/dev/VolGroup00/LogVol01 swap                   swap    defaults        0 0
+LABEL=/mydata           /mydata                 ext3    defaults        1 2
+```
+
+Only the **last line** is important, with this configuration line added to the fstab file, the file system will now automount on the next system boot. 
+
 
 
 
