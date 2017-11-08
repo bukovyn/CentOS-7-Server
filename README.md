@@ -101,14 +101,14 @@ The following steps assume that the new drive has been installed and is recogniz
 If the above assumptions are correct and your drive is recognized, it should be detected automatically by CentOS. Typically, the convention for drive names begin with hd or sd followed by a letter to indicate the device. For example, the first device could be /dev/sda or /dev/hda, the second /dev/sdb or /dev/hdb, and so on.
 
 The following command shows the output with only ony physical drive on the system:
-```sh
+```
 ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/sdc
 ```
 This shows the disk drive /dev/sda as well as two of it's partitions, /dev/sda1 and /dev/sda2. In this case, /dev/sdc is the CDROM. Most of the time, when a new drive is added it will be assigned to /dev/sdb.
 
 The following output is what is seen when a second drive is installed:
-```sh
+```
 ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/sdb  /dev/sdc
 ```
@@ -122,12 +122,12 @@ The new drive is recognized as /dev/sdb.
 Now we must create one or more partitions on the disk. In order to partition the new drive `/dev/sdb`, we can use the [`fdisk`](http://www.tldp.org/HOWTO/Partition/fdisk_partitioning.html) command `fdisk /dev/sdb`.
 
 Running `fdisk`:
-```sh
+```
 Command (m for help):
 ```
 
 `p` shows our drives partitions, as you can see, there are currently none.
-```sh
+```
 Command (m for help): p
 
 Disk /dev/sda: 640.1 GB, 640135028736 bytes, 1250263728 sectors
@@ -141,7 +141,7 @@ Disk identifier: 0x8ac86c1a
 ```
 
 To create a new partition, we run `n`:
-```sh
+```
 Command (m for help): n
 Partition type:
    p   primary (0 primary, 0 extended, 4 free)
@@ -161,7 +161,7 @@ Then we are prompted for a partition number, it is best to go by default and pre
 Lastly, we are prompted for partition size, this is entirely up to you and the purpose of your drive. For examples sake, if you wanted one partition that used all the space on your new drive, simply press `Enter` twice with no input as this will default to the first available block to the last available block.
 
 The last step is to write the specified partition to the disk by typing `w`:
-```sh
+```
 Command (m for help): w
 The partition table has been altered!
 
@@ -169,7 +169,7 @@ Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
 Running `ls /dev/sd*` (the command used to see devices which we ran earlier), we can now see the new partition as `dev/sdb1`:
-```sh
+```
 ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/hsdb  /dev/sb1  /dev/sdc
 ```
