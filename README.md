@@ -185,7 +185,7 @@ After we have created the new file system on our disk's partition, we need to mo
 ```
 mkdir /mydata
 ```
-Once this directory exists, we can manually mount the filesystem using... you guessed it! The [`mount`](http://man7.org/linux/man-pages/man8/mount.8.html) command:
+Once this directory exists, we can manually mount the filesystem using... *you guessed it!* The [`mount`](http://man7.org/linux/man-pages/man8/mount.8.html) command:
 ```
 mount /dev/sdb1 /mydata
 ```
