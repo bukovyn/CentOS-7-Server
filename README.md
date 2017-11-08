@@ -206,7 +206,7 @@ or
 ```
 vim /etc/fstab
 ```
-*Note: install `vim` by running `yum -y install vim`. `vim` is an enhanced version of the default `vi` that comes with the operating system.*
+*Tip: install `vim` by running `yum -y install vim`. `vim` is an enhanced version of the default `vi` that comes with the operating system.*
 
 The following is a sample output of the fstab file configured to automount our /mydata partition:
 ```
