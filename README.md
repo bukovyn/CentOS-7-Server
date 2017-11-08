@@ -90,21 +90,21 @@ The following steps assume that the new drive has been installed and is recogniz
 <a name="finding-your-drive"></a> 
 #### Finding Your Drive
 
-If the above assumptions are correct and your drive is recognized, it should be detected automatically by CentOS. Typically, the convention for drive names begin with hd or sd followed by a letter to indicate the device. For example, the first device could be /dev/sda or /dev/hda, the second /dev/sdb or /dev/hdb, and so on.
+If the above assumptions are correct and your drive is recognized, it should be detected automatically by CentOS. Typically, the convention for drive names begin with hd or sd followed by a letter to indicate the device. For example, the first device could be `/dev/sda` or `/dev/hda`, the second `/dev/sdb` or `/dev/hdb`, and so on.
 
 The following command shows the output with only ony physical drive on the system:
 ```
 ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/sdc
 ```
-This shows the disk drive /dev/sda as well as two of it's partitions, /dev/sda1 and /dev/sda2. In this case, /dev/sdc is the CD-ROM. Most of the time, when a new drive is added it will be assigned to /dev/sdb.
+This shows the disk drive `/dev/sda` as well as two of it's partitions, `/dev/sda1` and `/dev/sda2`. In this case, `/dev/sdc` is the CD-ROM. Most of the time, when a new drive is added it will be assigned to `/dev/sdb`.
 
 The following output is what is seen when a second drive is installed:
 ```
 ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/sdb  /dev/sdc
 ```
-The new drive is recognized as /dev/sdb.
+The new drive is recognized as `/dev/sdb`.
 
 *Note: /dev/sdb currently has no partitions shown, which we must create along with file systems and then mount them for access. This is explained in the following steps.*
 
