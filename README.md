@@ -97,7 +97,7 @@ The following command shows the output with only ony physical drive on the syste
 ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/sdc
 ```
-*Note: If you get the error - `ls: cannot access /dev/sd*: No such file or directory`. Try `ls /dev/hd*`*
+*Note: If you get the error - `ls: cannot access /dev/sd*: No such file or directory`. Try `ls /dev/hd*`*.
 
 This shows the disk drive `/dev/sda` as well as two of it's partitions, `/dev/sda1` and `/dev/sda2`. In this case, `/dev/sdc` is the CD-ROM. Most of the time, when a new drive is added it will be assigned to `/dev/sdb`.
 
