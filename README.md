@@ -25,4 +25,13 @@
     - [Firewall](#firewall)
 - [Additional Steps](#additional-steps)
     - [Mounting Additional Drives](#mounting-additional-drives)
+ 
+<a name="installation"></a> 
+## Installation
+
+<a name="cd"></a>
+### CD
+
+<a name="usb"></a>
+### USB
 
