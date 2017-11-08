@@ -35,3 +35,55 @@
 <a name="usb"></a>
 ### USB
 
+<a name="setup"></a> 
+## Setup
+
+<a name="root-login"></a>
+### Root Login
+
+<a name="new-user"></a>
+### New User
+
+<a name="root-priviliges"></a>
+### Root Priviliges
+
+<a name="public-key"></a>
+### Public Key
+
+<a name="ssh-copy-id"></a>
+#### ssh-copy-id
+
+<a name="manually"></a>
+#### Manually
+
+<a name="software-essentials"></a> 
+## Software Essentials
+
+<a name="vim"></a> 
+### Vim
+
+<a name="configuration"></a> 
+## Configuration
+
+<a name="sshd"></a> 
+### SSH Daemon
+
+<a name="networking"></a> 
+### Networking
+
+<a name="selinux"></a> 
+### SELinux
+
+<a name="firewall"></a> 
+### Firewall
+
+<a name="additional-steps"></a> 
+## Additional Steps
+
+<a name="mounting-additional-drives"></a> 
+### Mounting Additional Drives
+
+
+
+
+
