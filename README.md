@@ -2,7 +2,7 @@
   <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/CentOSLogo.png" alt="CentOS" height="250">
 </p>
 
-#### A guide (in progress) to configuring a minimal install of CentOS to set up a local server.
+#### A guide (in progress) to installing & configuring a minimal install of CentOS for the purpose of setting up a local server.
 
 **Table of Contents**
 
