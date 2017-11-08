@@ -34,6 +34,8 @@
 <a name="installation"></a> 
 ## Installation
 
+You can download CentOS [here](https://www.centos.org/download/). This guide follows installation and configuration for the [minimal version](http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1708.iso) of CentOS.
+
 <a name="cd"></a>
 ### CD
 
