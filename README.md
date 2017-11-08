@@ -220,7 +220,8 @@ proc                    /proc                   proc    defaults        0 0
 LABEL=/mydata           /mydata                 ext3    defaults        1 2
 ```
 
-Only the **last line** is important, with this configuration line added to the fstab file, the file system will now automount on the next system boot. 
+**Only the last line is important.** 
+With this configuration line added to the fstab file, the file system will now automount on the next system boot. 
 
 
 
