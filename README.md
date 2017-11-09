@@ -16,8 +16,8 @@
         - [ssh-copy-id](#ssh-copy-id)
         - [manually](#manually)
 - [Configuration](#configuration)
-    - [SSH Daemon](#sshd)
     - [Networking](#networking)
+    - [SSH Daemon](#sshd)
     - [SELinux](#selinux)
     - [Firewall](#firewall)
 - [Additional Steps](#additional-steps)
@@ -74,11 +74,11 @@ With your bootable image mounted on your flash drive, we are ready to begin the 
 <a name="configuration"></a> 
 ## Configuration
 
-<a name="sshd"></a> 
-### SSH Daemon
-
 <a name="networking"></a> 
 ### Networking
+
+<a name="sshd"></a> 
+### SSH Daemon
 
 <a name="selinux"></a> 
 ### SELinux
