@@ -21,7 +21,7 @@
     - [Update & Upgrade](#update-upgrade)
     - [SSH Daemon](#sshd)
     - [SELinux](#selinux)
-    - [Firewall](#firewall)
+    - [FirewallD](#firewalld)
 - [Additional Steps](#additional-steps)
     - [Adding Additional Drives](#adding-additional-drives)
       - [Assumptions](#assumptions)
@@ -194,8 +194,8 @@ So, just `vi /etc/sysconfig/selinux` and set it to whichever option suits you.
 
 Additionally, [`getenforce`](https://linux.die.net/man/8/getenforce) tells you the current mode of SELinux, [`setenforce 0`](https://linux.die.net/man/8/setenforce) temporarily puts SELinux into permissive mode and [`setenforce 1`](https://linux.die.net/man/8/setenforce) temporarily puts SELinux into enforcing mode. To disable it, you must go into the `selinux` file as explained above.
 
-<a name="firewall"></a> 
-### Firewall
+<a name="firewalld"></a> 
+### FirewallD
 
 <a name="additional-steps"></a> 
 ## Additional Steps
