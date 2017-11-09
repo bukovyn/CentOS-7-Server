@@ -19,7 +19,7 @@
     - [Networking](#networking)
     - [Hostname](#hostname)
     - [Update & Upgrade](#update-upgrade)
-    - [SSH Daemon](#sshd)
+    - [SSH](#ssh)
     - [SELinux](#selinux)
     - [FirewallD](#firewalld)
 - [Additional Steps](#additional-steps)
@@ -161,8 +161,30 @@ yum -y update && yum -y upgrade
 
 Although keep in mind the first version of the command is recommended as the `-y` flag assumes yes when prompted if you want the updates to take place. It is good practice to review the changes that are about to take place if you are not sure what exactly is being updated.
 
-<a name="sshd"></a> 
-### SSH Daemon
+<a name="ssh"></a> 
+### SSH
+
+[SSH](https://linux.die.net/man/1/ssh) stands for Secure Shell. It is the default protocol for remote management in Linux and it comes with our minimal install of CentOS.
+
+To check the currently installed version:
+
+```
+ssh -V
+```
+
+It is generally a good idea to disable root login and allow users to connect as root only after they have logged in to their normal user account. This is for security purposes as it prevents the possibily of someone [brute forcing](https://en.wikipedia.org/wiki/Brute-force_attack) their way into your server.
+
+To do this, we edit the `/etc/ssh/sshd_config` file and change `PermitRootLogin yes` to `PermitRootLogin no`:
+
+```
+vi /etc/ssh/sshd_config
+```
+
+After these changes, restart the service for it to take effect:
+
+```
+systemctl restart sshd.service
+```
 
 <a name="selinux"></a> 
 ### SELinux
