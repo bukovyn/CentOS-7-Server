@@ -33,7 +33,7 @@
       
  
 <a name="installation"></a> 
-## Installation
+## :computer: Installation
 
 You can download CentOS [here](https://www.centos.org/download/). This guide follows installation and configuration for the [minimal version](http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1708.iso) of CentOS.
 
@@ -53,7 +53,7 @@ The most common and most convenient method for most would be to make a bootable 
 
 With your bootable image mounted on your flash drive, we are ready to begin the setup process. Insert the drive on the machine where you want your server on and boot it up *(or restart it)*. In most cases, we will have to set the boot priority in BIOS so that the system boots from your flash drive rather than from any other existing drives on it. Right as the system is booting there will be a prompt to press some key *(usually `Delete` or `F12` to enter BIOS settings)*. Not every BIOS is the same but changing the booty priority is usually on the main page, make sure your flash drive is first in boot priority, save the adjusted settings and reboot. On reboot you should enter the CentOS setup process.
 <a name="setup"></a> 
-## Setup
+## :computer: Setup
 
 <a name="root-login"></a>
 ### Root Login
@@ -74,7 +74,7 @@ With your bootable image mounted on your flash drive, we are ready to begin the 
 #### Manually
 
 <a name="configuration"></a> 
-## Configuration
+## :computer: Configuration
 
 <a name="networking"></a> 
 ### Networking
@@ -220,7 +220,7 @@ Additionally, [`getenforce`](https://linux.die.net/man/8/getenforce) tells you t
 ### FirewallD
 
 <a name="additional-steps"></a> 
-## Additional Steps
+## :computer: Additional Steps
 
 <a name="adding-additional-drives"></a> 
 ### Adding Additional Drives
