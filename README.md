@@ -86,6 +86,7 @@ DEVICE  TYPE      STATE      CONNECTION
 enp0s3  ethernet  connected  enp0s3
 lo      loopback  unmanaged  --
 ```
+:grey_exclamation: *Note: In code snippets with more than one line, `$` denotes user input into the command line. It is not part of the command, it is simply there to help distinguish input from output. Lines without `$` are output from the console as a result of the command. Code snippets with only one line will always be input in this guide.*
 
 Great, the system recognizes your ethernet device.
 
