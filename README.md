@@ -233,7 +233,7 @@ $ systemctl enable firewalld
 $ systemctl start firewalld
 ```
 
-:star: *Tip: You can always check which state the service is in by running the command `firewall-cmd --state`!*
+:star: *Tip: You can always check which state the service is in by running the command `firewall-cmd --state`.*
 
 
 
