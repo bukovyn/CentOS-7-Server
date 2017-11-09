@@ -83,7 +83,7 @@ Most likely, after the minimal install of CentOS, you will not be able to connec
 
 To see a list of ethernet cards installed on your machine, run the `nmcli d` command as shown with sample output:
 ```
-nmcli d
+$ nmcli d
 DEVICE  TYPE      STATE      CONNECTION
 enp0s3  ethernet  connected  enp0s3
 lo      loopback  unmanaged  --
@@ -113,7 +113,7 @@ After we exit the `nmtui` interface, lets restart our network by running `servic
 Now the server will get IP address from DHCP. Verify your IP by running `ip addr` on the command line. Furthermore, we can check if we have an active connection by pinging Google:
 
 ```
-ping -c3 8.8.8.8
+$ ping -c3 8.8.8.8
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=57 time=5.75 ms
 64 bytes from 8.8.8.8: icmp_seq=2 ttl=57 time=6.45 ms
@@ -170,7 +170,7 @@ Although keep in mind the first version of the command is recommended as the `-y
 You can edit the `/etc/sysconfig/selinux` file from the command line, this file is a symlink to `/etc/selinux/config`. The following is a sample output of the [`selinux`](https://www.systutorials.com/docs/linux/man/8-selinux/) file:
 
 ```
-cat /etc/sysconfig/selinux
+$ cat /etc/sysconfig/selinux
 # This file controls the state of SELinux on the system.
 # SELINUX= can take one of these three values:
 #       enforcing - SELinux security policy is enforced.
@@ -215,7 +215,7 @@ If the above assumptions are correct and your drive is recognized, it should be 
 
 The following command shows the output with only ony physical drive on the system:
 ```
-ls /dev/sd*
+$ ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/sdc
 ```
 :grey_exclamation: *Note: If you get the error - `ls: cannot access /dev/sd*: No such file or directory`. Try `ls /dev/hd*`*.
@@ -224,7 +224,7 @@ This shows the disk drive `/dev/sda` as well as two of it's partitions, `/dev/sd
 
 The following output is what is seen when a second drive is installed:
 ```
-ls /dev/sd*
+$ ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/sdb  /dev/sdc
 ```
 The new drive is recognized as `/dev/sdb`.
@@ -238,12 +238,12 @@ Now we must create one or more partitions on the disk. In order to partition the
 
 Running `fdisk`:
 ```
-Command (m for help):
+$ Command (m for help):
 ```
 
 `p` shows our drives partitions, as you can see, there are currently none.
 ```
-Command (m for help): p
+$ Command (m for help): p
 
 Disk /dev/sda: 640.1 GB, 640135028736 bytes, 1250263728 sectors
 Units = sectors of 1 * 512 = 512 bytes
@@ -260,15 +260,15 @@ Disk identifier: 0x8ac86c1a
 
 To create a new partition, we run `n`:
 ```
-Command (m for help): n
+$ Command (m for help): n
 Partition type:
    p   primary (0 primary, 0 extended, 4 free)
    e   extended
-Select (default p): p
-Partition number (1-4, default 1):
-First sector (2048-1250263727, default 2048):
+$ Select (default p): p
+$ Partition number (1-4, default 1):
+$ First sector (2048-1250263727, default 2048):
 Using default value 2048
-Last sector, +sectors or +size{K,M,G} (2048-1250263727, default 1250263727):
+$ Last sector, +sectors or +size{K,M,G} (2048-1250263727, default 1250263727):
 Using default value 1250263727
 Partition 1 of type Linux and of size 596.2 GiB is set
 ```
@@ -280,7 +280,7 @@ Lastly, we are prompted for partition size, this is entirely up to you and the p
 
 The last step is to write the specified partition to the disk by typing `w`:
 ```
-Command (m for help): w
+$ Command (m for help): w
 The partition table has been altered!
 
 Calling ioctl() to re-read partition table.
@@ -288,7 +288,7 @@ Syncing disks.
 ```
 Running `ls /dev/sd*` *(the command used to see devices which we ran earlier)*, we can now see the new partition as `dev/sdb1`:
 ```
-ls /dev/sd*
+$ ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/hsdb  /dev/sb1  /dev/sdc
 ```
 The next step is to create a file system on our newly made partition.
@@ -329,6 +329,7 @@ vi /etc/fstab
 
 The following is a sample output of the fstab file configured to automount our /mydata partition:
 ```
+$ cat /etc/fstab
 /dev/VolGroup00/LogVol00 /                      ext3    defaults        1 1
 LABEL=/boot             /boot                   ext3    defaults        1 2
 tmpfs                   /dev/shm                tmpfs   defaults        0 0
