@@ -61,7 +61,7 @@ With your bootable image mounted on your flash drive, we are ready to begin the 
 <a name="new-user"></a>
 ### New User
 
-<a name="root-priviliges"></a>
+<a name="root-privileges"></a>
 ### Root Priviliges
 
 <a name="public-key"></a>
