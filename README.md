@@ -129,7 +129,7 @@ If you receive packets back, congratulations, you are connected.
 <a name="hostname"></a>
 ### Hostname
 
-Check the currently assigned HOSTNAME with either `echo $HOSTNAME` or `hostname`.
+Check the currently assigned `HOSTNAME` with either `echo $HOSTNAME` or `hostname`.
 
 If you wish to change this, simply edit the `/etc/hostname` file to your desired name by typing:
 
