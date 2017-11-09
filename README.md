@@ -7,8 +7,7 @@
 **Table of Contents**
 
 - [Installation](#installation)
-    - [CD](#cd)
-    - [USB](#usb)
+    - [Bootable Drive](#bootable-drive)
 - [Setup](#setup)
     - [Root Login](#root-login)
     - [New User](#new-user)
@@ -36,12 +35,21 @@
 
 You can download CentOS [here](https://www.centos.org/download/). This guide follows installation and configuration for the [minimal version](http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1708.iso) of CentOS.
 
-<a name="cd"></a>
-### CD
+<a name="bootable-drive"></a>
+### Bootable Drive
 
-<a name="usb"></a>
-### USB
+*Note: I will not be covering how to mount the image on a CD-ROM as it is mainly platform dependent and varies on which OS you are using, if this is the case, you can easily find out how to do this with a quick google search.*
 
+*Warning: Burning a bootable image to a USB flash drive will format the drive and wipe all data on it, please use an empty drive or one with disposable data.*
+
+The most common and most convenient method for most would be to make a bootable flash drive, any USB with sufficient space should be fine. [Etcher](https://etcher.io/) is a fantastic tool for burning images to your flash drive and it is available on Windows, macOS, and Linux. Once you have [downloaded CentOS](https://www.centos.org/download/), the image burning process is extremely simple. With your flash drive insterted, follow these steps on Etcher *(or if you have a preffered image burning tool, feel free to use that!)*
+
+
+<p align="center">
+  <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/Etcher.gif" alt="Etcher" height="350">
+</p>
+
+With your bootable image mounted on your flash drive, we are ready to begin the setup process. Insert the drive on the machine where you want your server on and boot it up (or restart it). In most cases, we will have to set the boot priority in BIOS so that the system boots from your flash drive rather than from any other existing drives on it. Right as the system is booting there will be a prompt to press some key *(usually `Delete` or `F12` to enter BIOS settings)*. Not every BIOS is the same but changing the booty priority is usually on the main page, make sure your flash drive is first in boot priority, save the adjusted settings and reboot. On reboot you should enter the CentOS setup process.
 <a name="setup"></a> 
 ## Setup
 
