@@ -136,7 +136,7 @@ If you wish to change this, simply edit the `/etc/hostname` file to your desired
 ```
 vi /etc/hostname
 ```
-<p align="center"> or </p>
+or
 ```
 vim /etc/hostname
 ```
@@ -154,7 +154,7 @@ You can either run:
 ```
 yum update && yum upgrade
 ```
-<p align="center"> or </p>
+or
 ```
 yum -y update && yum -y upgrade
 ```
