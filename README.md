@@ -159,7 +159,7 @@ or
 yum -y update && yum -y upgrade
 ```
 
-Although keep in mind the first version of the command is recommended as the `-y` flag automatically inputs yes when it prompts you if you want to install the updates. It is good practice to review the changes that are about to take place if you are not sure what exactly is being updated.
+Although keep in mind the first version of the command is recommended as the `-y` flag assumes yes when prompted if you want the updates to take place. It is good practice to review the changes that are about to take place if you are not sure what exactly is being updated.
 
 <a name="sshd"></a> 
 ### SSH Daemon
