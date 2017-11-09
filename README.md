@@ -49,7 +49,7 @@ The most common and most convenient method for most would be to make a bootable 
   <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/Etcher.gif" alt="Etcher" height="350">
 </p>
 
-With your bootable image mounted on your flash drive, we are ready to begin the setup process. Insert the drive on the machine where you want your server on and boot it up (or restart it). In most cases, we will have to set the boot priority in BIOS so that the system boots from your flash drive rather than from any other existing drives on it. Right as the system is booting there will be a prompt to press some key *(usually `Delete` or `F12` to enter BIOS settings)*. Not every BIOS is the same but changing the booty priority is usually on the main page, make sure your flash drive is first in boot priority, save the adjusted settings and reboot. On reboot you should enter the CentOS setup process.
+With your bootable image mounted on your flash drive, we are ready to begin the setup process. Insert the drive on the machine where you want your server on and boot it up *(or restart it)*. In most cases, we will have to set the boot priority in BIOS so that the system boots from your flash drive rather than from any other existing drives on it. Right as the system is booting there will be a prompt to press some key *(usually `Delete` or `F12` to enter BIOS settings)*. Not every BIOS is the same but changing the booty priority is usually on the main page, make sure your flash drive is first in boot priority, save the adjusted settings and reboot. On reboot you should enter the CentOS setup process.
 <a name="setup"></a> 
 ## Setup
 
@@ -175,7 +175,7 @@ The partition table has been altered!
 Calling ioctl() to re-read partition table.
 Syncing disks.
 ```
-Running `ls /dev/sd*` (the command used to see devices which we ran earlier), we can now see the new partition as `dev/sdb1`:
+Running `ls /dev/sd*` *(the command used to see devices which we ran earlier)*, we can now see the new partition as `dev/sdb1`:
 ```
 ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/hsdb  /dev/sb1  /dev/sdc
