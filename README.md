@@ -77,11 +77,48 @@ With your bootable image mounted on your flash drive, we are ready to begin the 
 <a name="networking"></a> 
 ### Networking
 
+Most likely, after the minimal install of CentOS, you will not be able to connect to the network because the Ethernet interfaces are not enabled. 
+
+To see a list of ethernet cards installed on your machine, run the `nmcli d` command as shown with sample output:
+```
+nmcli d
+DEVICE  TYPE      STATE      CONNECTION
+enp2s0  ethernet  connected  enp2s0
+lo      loopback  unmanaged  --
+```
+
+Great, the system recognizes your ethernet cable.
+
 <a name="sshd"></a> 
 ### SSH Daemon
 
 <a name="selinux"></a> 
 ### SELinux
+
+You can edit the `/etc/sysconfig/selinux` file from the command line, this file is a symlink to `/etc/selinux/config`. The following is a sample output of the [`selinux`](https://www.systutorials.com/docs/linux/man/8-selinux/) file:
+
+```
+cat /etc/sysconfig/selinux
+# This file controls the state of SELinux on the system.
+# SELINUX= can take one of these three values:
+#       enforcing - SELinux security policy is enforced.
+#       permissive - SELinux prints warnings instead of enforcing.
+#       disabled - SELinux is fully disabled.
+SELINUX=enforcing
+# SELINUXTYPE= type of policy in use. Possible values are:
+#       targeted - Only targeted network daemons are protected.
+#       strict - Full SELinux protection.
+SELINUXTYPE=targeted
+
+# SETLOCALDEFS= Check local definition changes
+SETLOCALDEFS=0
+```
+
+Why would I want to change the SELinux configurations? Great question, you might not want to. 
+
+So, do your research. If it is a local server only you are using, you can go ahead and disable it, whereas if this is a server that will be in use by multiple people then maybe disabling it isn't the best option. If you are still unsure as to what to do, I would recommend setting it to permissive. 
+
+So, just `vi /etc/sysconfig/selinux` and set it to whichever option suits you.
 
 <a name="firewall"></a> 
 ### Firewall
