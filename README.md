@@ -2,8 +2,6 @@
   <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/CentOSLogo.png" alt="CentOS" height="250">
 </p>
 
-:page_facing_up: A guide (in progress) to setting up a minimal install of CentOS as a server.
-
 ### :book: Table of Contents
 
 - [Installation](#installation)
