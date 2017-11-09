@@ -192,7 +192,7 @@ So, do your research. If it is a local server only you are using, you can go ahe
 
 So, just `vi /etc/sysconfig/selinux` and set it to whichever option suits you.
 
-Additionally, for the purpose of debugging, `setenforce 0` temporarily disables SELinux and `setenforce 1` temporarily enables it.
+Additionally, [`getenforce`](https://linux.die.net/man/8/getenforce) tells you the current mode of SELinux, [`setenforce 0`](https://linux.die.net/man/8/setenforce) temporarily puts SELinux into permissive mode and [`setenforce 1`](https://linux.die.net/man/8/setenforce) temporarily puts SELinux into enforcing mode.
 
 <a name="firewall"></a> 
 ### Firewall
