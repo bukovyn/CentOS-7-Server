@@ -109,7 +109,7 @@ Now lets run the command `nmtui` :
   
 After we exit the `nmtui` interface, lets restart our network by running `service network restart`.
 
-Now the server will get IP address from DHCP. Verify your IP by running `ip addr` on the command line. Furthermore, we can check if we have an active connection by pinging Google:
+Now the server will get IP address from [DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol). Verify your IP by running `ip addr` on the command line. Furthermore, we can check if we have an active connection by pinging Google:
 
 ```
 $ ping -c3 8.8.8.8
