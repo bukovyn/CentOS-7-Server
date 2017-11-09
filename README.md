@@ -83,11 +83,46 @@ To see a list of ethernet cards installed on your machine, run the `nmcli d` com
 ```
 nmcli d
 DEVICE  TYPE      STATE      CONNECTION
-enp2s0  ethernet  connected  enp2s0
+enp0s3  ethernet  connected  enp0s3
 lo      loopback  unmanaged  --
 ```
 
-Great, the system recognizes your ...
+Great, the system recognizes your ethernet device.
+
+Now lets run the command `nmtui` :
+
+<p align="center">
+  <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/nmtui1.png" alt="nmtui1" height="250">
+</p>
+<p align="center"><i>Select the "Edit a connection" option.</i></p>
+
+<p align="center">
+  <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/nmtui2.png" alt="nmtui2" height="250">
+</p>
+<p align="center"><i>Select the "Edit" option.</i></p>
+
+<p align="center">
+  <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/nmtui3.png" alt="nmtui3" height="250">
+</p>
+<p align="center"><i>Finally, make sure your IPv4 configuration is set to automatic and "Automatically connect" is checked, finish with "OK"</i></p>
+  
+After we exit the `nmtui` interface, lets restart our network by running `service network restart`.
+
+Now the server will get IP address from DHCP. Verify your IP by running `ip addr` on the command line. Furthermore, we can check if we have an active connection by pinging Google.
+
+```
+ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=57 time=8.36 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=57 time=6.42 ms
+^ctrl-C
+--- 8.8.8.8 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1685ms
+rtt min/avg/max/mdev = 6.424/7.393/8.363/0.973 ms
+```
+
+If you receive packets back, congratulations, you are connected.
+
 
 <a name="sshd"></a> 
 ### SSH Daemon
