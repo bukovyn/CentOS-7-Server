@@ -17,6 +17,8 @@
         - [manually](#manually)
 - [Configuration](#configuration)
     - [Networking](#networking)
+    - [Hostname](#hostname)
+    - [Update & Upgrade](#update-upgrade)
     - [SSH Daemon](#sshd)
     - [SELinux](#selinux)
     - [Firewall](#firewall)
@@ -108,21 +110,56 @@ Now lets run the command `nmtui` :
   
 After we exit the `nmtui` interface, lets restart our network by running `service network restart`.
 
-Now the server will get IP address from DHCP. Verify your IP by running `ip addr` on the command line. Furthermore, we can check if we have an active connection by pinging Google.
+Now the server will get IP address from DHCP. Verify your IP by running `ip addr` on the command line. Furthermore, we can check if we have an active connection by pinging Google:
 
 ```
-ping 8.8.8.8
+ping -c3 8.8.8.8
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
-64 bytes from 8.8.8.8: icmp_seq=1 ttl=57 time=8.36 ms
-64 bytes from 8.8.8.8: icmp_seq=2 ttl=57 time=6.42 ms
-^ctrl-C
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=57 time=5.75 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=57 time=6.45 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=57 time=6.85 ms
+
 --- 8.8.8.8 ping statistics ---
-2 packets transmitted, 2 received, 0% packet loss, time 1685ms
-rtt min/avg/max/mdev = 6.424/7.393/8.363/0.973 ms
+3 packets transmitted, 3 received, 0% packet loss, time 2010ms
+rtt min/avg/max/mdev = 5.752/6.356/6.859/0.462 ms
 ```
 
 If you receive packets back, congratulations, you are connected.
 
+<a name="hostname"></a>
+### Hostname
+
+Check the currently assigned HOSTNAME with either `echo $HOSTNAME` or `hostname`.
+
+If you wish to change this, simply edit the `/etc/hostname` file to your desired name by typing:
+
+```
+vi /etc/hostname
+```
+or
+```
+vim /etc/hostname
+```
+*Tip: install `vim` by running `yum -y install vim`. `vim` is an enhanced version of the default `vi` that comes with the operating system.*
+
+To confirm the change, logout and login again and check the new hostname with `echo $HOSTNAME`.
+
+<a name="update-upgrade"></a>
+### Update & Upgrade
+
+This will only update and install the latest versions of already installed packages, it will not install any new ones so no need to worry about that.
+
+You can either run:
+
+```
+yum update && yum upgrade
+```
+or
+```
+yum -y update && yum -y upgrade
+```
+
+Although keep in mind the first version of the command is recommended as the `-y` flag automatically inputs yes when it prompts you if you want to install the updates. It is good practice to review the changes that are about to take place if you are not sure what exactly is being updated.
 
 <a name="sshd"></a> 
 ### SSH Daemon
@@ -287,11 +324,6 @@ Simply run:
 ```
 vi /etc/fstab 
 ```
-or
-```
-vim /etc/fstab
-```
-*Tip: install `vim` by running `yum -y install vim`. `vim` is an enhanced version of the default `vi` that comes with the operating system.*
 
 The following is a sample output of the fstab file configured to automount our /mydata partition:
 ```
