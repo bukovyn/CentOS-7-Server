@@ -217,6 +217,31 @@ Additionally, [`getenforce`](https://linux.die.net/man/8/getenforce) tells you t
 <a name="firewalld"></a> 
 ### FirewallD
 
+[`firewalld`](https://www.unix.com/man-page/centos/1/firewalld/) is a firewall service that manages the server dynamically. It is installed by default on CentOS.  Flushing and recreating of new rules are not required and changes are applied on the go.
+
+Generally, if it is a local network behind a [NAT](https://en.wikipedia.org/wiki/Network_address_translation) router, you don't need to worry about `firewalld` and can disable it by:
+```
+$ systemctl stop firewalld
+$ systemctl disable firewalld
+```
+But I would take the time to read up on the `firewalld` man pages and decide for yourselves whether or not it is a good idea to disable the service.
+
+If you disabled it and need to enable it again, the command is:
+
+```
+$ systemctl enable firewalld
+$ systemctl start firewalld
+```
+
+:star: *Tip: You can always check which state the service is in by running the command `firewall-cmd --state`!*
+
+
+
+
+
+
+
+
 <a name="additional-steps"></a> 
 ## :computer: Additional Steps
 
