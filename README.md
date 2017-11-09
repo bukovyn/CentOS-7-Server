@@ -2,9 +2,9 @@
   <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/CentOSLogo.png" alt="CentOS" height="250">
 </p>
 
-#### A guide (in progress) to setting up a minimal install of CentOS as a server.
+#### :page_facing_up: A guide (in progress) to setting up a minimal install of CentOS as a server.
 
-**Table of Contents**
+### :book: Table of Contents
 
 - [Installation](#installation)
     - [Bootable Drive](#bootable-drive)
