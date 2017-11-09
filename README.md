@@ -40,7 +40,7 @@ You can download CentOS [here](https://www.centos.org/download/). This guide fol
 
 *Note: I will not be covering how to mount the image on a CD-ROM as it is mainly platform dependent and varies on which OS you are using, if this is the case, you can easily find out how to do this with a quick google search.*
 
-*Warning: Burning a bootable image to a USB flash drive will format the drive and wipe all data on it, please use an empty drive or one with disposable data.*
+*WARNING: Burning a bootable image to a USB flash drive will format the drive and wipe all data on it, please use an empty drive or one with disposable data.*
 
 The most common and most convenient method for most would be to make a bootable flash drive, any USB with sufficient space should be fine. [Etcher](https://etcher.io/) is a fantastic tool for burning images to your flash drive and it is available on Windows, macOS, and Linux. Once you have [downloaded CentOS](https://www.centos.org/download/), the image burning process is extremely simple. With your flash drive inserted, follow these steps on Etcher *(or if you have a preffered image burning tool, feel free to use that!)*
 
