@@ -87,7 +87,7 @@ enp2s0  ethernet  connected  enp2s0
 lo      loopback  unmanaged  --
 ```
 
-Great, the system recognizes your ethernet cable.
+Great, the system recognizes your ...
 
 <a name="sshd"></a> 
 ### SSH Daemon
