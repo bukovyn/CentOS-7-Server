@@ -40,7 +40,7 @@ You can download CentOS [here](https://www.centos.org/download/). This guide fol
 <a name="bootable-drive"></a>
 ### Bootable Drive
 
-:grey-exclamation:*Note: I will not be covering how to mount the image on a CD-ROM as it is mainly platform dependent and varies on which OS you are using, if this is the case, you can easily find out how to do this with a quick google search.*
+:grey_exclamation:*Note: I will not be covering how to mount the image on a CD-ROM as it is mainly platform dependent and varies on which OS you are using, if this is the case, you can easily find out how to do this with a quick google search.*
 
 :warning:*WARNING: Burning a bootable image to a USB flash drive will format the drive and wipe all data on it, please use an empty drive or one with disposable data.*
 
@@ -218,7 +218,7 @@ The following command shows the output with only ony physical drive on the syste
 ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/sdc
 ```
-:grey-exclamation:*Note: If you get the error - `ls: cannot access /dev/sd*: No such file or directory`. Try `ls /dev/hd*`*.
+:grey_exclamation:*Note: If you get the error - `ls: cannot access /dev/sd*: No such file or directory`. Try `ls /dev/hd*`*.
 
 This shows the disk drive `/dev/sda` as well as two of it's partitions, `/dev/sda1` and `/dev/sda2`. In this case, `/dev/sdc` is the CD-ROM. Most of the time, when a new drive is added it will be assigned to `/dev/sdb`.
 
@@ -229,7 +229,7 @@ ls /dev/sd*
 ```
 The new drive is recognized as `/dev/sdb`.
 
-:grey-exclamation:*Note: `/dev/sdb` currently has no partitions shown, which we must create along with file systems and then mount them for access. This is explained in the following steps.*
+:grey_exclamation:*Note: `/dev/sdb` currently has no partitions shown, which we must create along with file systems and then mount them for access. This is explained in the following steps.*
 
 <a name="creating-linux-partitions"></a> 
 #### Creating Linux Partition(s)
@@ -254,7 +254,7 @@ Disk identifier: 0x8ac86c1a
 
    Device Boot      Start         End      Blocks   Id  System
 ```
-:grey-exclamation:*Note: If this drive has previous partitions on it which you would like to get rid of, `d` deletes a partition, after deletion, `w` writes the modification to the disk.*
+:grey_exclamation:*Note: If this drive has previous partitions on it which you would like to get rid of, `d` deletes a partition, after deletion, `w` writes the modification to the disk.*
 
 :warning:*WARNING: Deleting a partition and writing it to the disk is a "semi"-permanent action, technically you can recover the deleted partition data but it is more trouble than it's worth. Think twice before deleting a partition.*
 
