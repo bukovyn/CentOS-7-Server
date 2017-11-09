@@ -92,17 +92,17 @@ Great, the system recognizes your ethernet device.
 Now lets run the command `nmtui` :
 
 <p align="center">
-  <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/nmtui1.png" alt="nmtui1" height="250">
+  <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/nmtui1.png" alt="nmtui1" height="300">
 </p>
 <p align="center"><i>Select the "Edit a connection" option.</i></p>
 
 <p align="center">
-  <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/nmtui2.png" alt="nmtui2" height="250">
+  <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/nmtui2.png" alt="nmtui2" height="450">
 </p>
 <p align="center"><i>Select the "Edit" option.</i></p>
 
 <p align="center">
-  <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/nmtui3.png" alt="nmtui3" height="250">
+  <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/nmtui3.png" alt="nmtui3" height="400">
 </p>
 <p align="center"><i>Finally, make sure your IPv4 configuration is set to automatic and "Automatically connect" is checked, finish with "OK"</i></p>
   
