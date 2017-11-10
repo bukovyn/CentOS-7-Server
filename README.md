@@ -59,7 +59,7 @@ With your bootable image mounted on your flash drive, we are ready to begin the 
 <a name="new-user"></a>
 ### New User
 
-You must be logged in as [root](http://www.linfo.org/root.html) in order to create a new user. This will enable users to log in with those credentials and the difference between a user account and a root account is individuality and the permissions that a user has.
+You must be logged in as [root](http://www.linfo.org/root.html) in order to create a new user. This will enable users to log in with those credentials. It is not advised to work in the command line as root, so this is the reason we are making a new user.
 
 To add a new user named `foo`:
 ```
