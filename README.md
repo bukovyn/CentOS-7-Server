@@ -54,7 +54,7 @@ With your bootable image mounted on your flash drive, we are ready to begin the 
 ## :computer: Setup
 
 <a name="root-login"></a>
-### Root Login
+### Root Login - in progress
 
 <a name="new-user"></a>
 ### New User
@@ -98,13 +98,13 @@ sudo ls
 :star: *Tip: `sudo su` enables root user mode until disabled with `exit`*.
 
 <a name="public-key"></a>
-### Public Key
+### Public Key - in progress
 
 <a name="ssh-copy-id"></a>
-#### ssh-copy-id
+#### ssh-copy-id - in progress
 
 <a name="manually"></a>
-#### Manually
+#### Manually - in progress
 
 <a name="configuration"></a> 
 ## :computer: Configuration
