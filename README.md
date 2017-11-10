@@ -259,7 +259,7 @@ The following steps assume that the new drive has been installed and is recogniz
 
 If the above assumptions are correct and your drive is recognized, it should be detected automatically by CentOS. Typically, the convention for drive names begin with hd or sd followed by a letter to indicate the device. For example, the first device could be `/dev/sda` or `/dev/hda`, the second `/dev/sdb` or `/dev/hdb`, and so on.
 
-The following command shows the output with only ony physical drive on the system:
+The following command shows the output with only one physical drive on the system:
 ```
 $ ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/sdc
