@@ -95,6 +95,8 @@ Now you can run commands with root priviliges by appending `sudo` to the command
 sudo ls
 ```
 
+:star: *Tip: `sudo su` enables root user mode until disabled with `exit`*
+
 <a name="public-key"></a>
 ### Public Key
 
