@@ -90,7 +90,10 @@ To add a user to the `wheel` group (in root):
 gpasswd -a foo wheel
 ```
 
-Now you can run commands with root priviliges by appending `sudo` to the command.
+Now you can run commands with root priviliges by appending `sudo` to the command as such:
+```
+sudo ls
+```
 
 <a name="public-key"></a>
 ### Public Key
