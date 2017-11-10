@@ -81,7 +81,7 @@ Next, we'll look at how to add root privileges for a specific user.
 <a name="root-privileges"></a>
 ### Root Priviliges
 
-What if we need to do administrative tasks on our new user account? This is where root privilges play a part, instead of switching between a normal user and the root account, we can set up super user priviliges on the `foo` account we made in the previous section. This will allow the user to run commands that would otherwise require root priviliges by putting [`sudo`](https://www.sudo.ws/intro.html) before each command.
+What if we need to do administrative tasks on our new user account? This is where root priviliges play their part, instead of switching between a normal user and the root account, we can set up super user priviliges on the `foo` account we made in the previous section. This will allow the user to run commands that would otherwise require root priviliges by putting [`sudo`](https://www.sudo.ws/intro.html) before each command.
 
 To add these priviliges, the user must be added to the [`wheel`](https://en.wikipedia.org/wiki/Wheel_(Unix_term)). Conveniently, on CentOS 7, users who belong to the `wheel` group are allowed to use `sudo` by default.
 
