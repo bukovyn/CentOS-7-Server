@@ -59,8 +59,38 @@ With your bootable image mounted on your flash drive, we are ready to begin the 
 <a name="new-user"></a>
 ### New User
 
+You must be logged in as [root](http://www.linfo.org/root.html) in order to create a new user. This will enable users to log in with those credentials and the difference between a user account and a root account is individuality and the permissions that a user has.
+
+To add a new user named `foo`:
+```
+adduser foo
+```
+
+To add a password to the user `foo`:
+```
+$ passwd foo
+Changing password for user foo.
+New password: 
+Retype new password:
+passwd: all authentication tokens updated successfully.
+```
+This will prompt you to type the password twice and now you can [`ssh`](http://www2.stat.duke.edu/comp/security/ssh_man.html) into the server as that user. 
+
+Next, we'll look at how to add root privileges for a specific user.
+
 <a name="root-privileges"></a>
 ### Root Priviliges
+
+What if we need to do administrative tasks on our new user account? This is where root privilges play a part, instead of switching between a normal user and the root account, we can set up super user priviliges on the `foo` account we made in the previous section. This will allow the user to run commands that would otherwise require root priviliges by putting [`sudo`](https://www.sudo.ws/intro.html) before each command.
+
+To add these priviliges, the user must be added to the [`wheel`](https://en.wikipedia.org/wiki/Wheel_(Unix_term)). Conveniently, on CentOS 7, users who belong to the `wheel` group are allowed to use `sudo` by default.
+
+To add a user to the `wheel` group (in root):
+```
+gpasswd -a foo wheel
+```
+
+Now you can run commands with root priviliges by appending `sudo` to the command.
 
 <a name="public-key"></a>
 ### Public Key
