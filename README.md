@@ -58,6 +58,8 @@ With your bootable image mounted on your flash drive, we are ready to begin the 
 
 To log into your server, you will need to know the password for the "root" account which you set up during the installation process as well as the server's public IP. To get the IP, on the server command line, run `ip addr`.
 
+:grey_exclamation: *Note: If your server does not have a public IP, please see the [Networking](#networking) section of this guide.*
+
 To actually log into the server as root:
 ```
 ssh root@SERVER_IP
