@@ -54,7 +54,17 @@ With your bootable image mounted on your flash drive, we are ready to begin the 
 ## :computer: Setup
 
 <a name="root-login"></a>
-### Root Login - in progress
+### Root Login
+
+To log into your server, you will need to know the password for the "root" account which you set up during the installation process as well as the server's public IP. To get the IP, on the server command line, run `ip addr`.
+
+To actually log into the server as root:
+```
+ssh root@SERVER_IP
+```
+You will most likely get a warning that the authenticity of the host can't be established and if you are sure you want to connect. That is normal, we will set up our key pair in a few steps. Type `yes` and enter your password. 
+
+:grey_exclamation: *Note: If it is your first time logging into the server with a password, you will be prompted to change the root password.*
 
 <a name="new-user"></a>
 ### New User
