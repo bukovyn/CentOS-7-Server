@@ -11,7 +11,7 @@
     - [New User](#new-user)
     - [Root Privileges](#root-privileges)
     - [Public Key Authentication](#public-key)
-        - [Copy Key to Server](#copy-key)
+     - [Copy Key to Server](#copy-key)
 - [Configuration](#configuration)
     - [Networking](#networking)
     - [Hostname](#hostname)
@@ -131,7 +131,7 @@ This will generate `id_rsa` *(the private key)* as well as `id_rsa.pub` *(the pu
 :warning: *WARNING: Do not share the private key with anyone who should not have access to your server.*
 
 <a name="copy-key"></a>
-#### Copy Key To Server - in progress
+### Copy Key To Server - in progress
 
 <a name="configuration"></a> 
 ## :computer: Configuration
