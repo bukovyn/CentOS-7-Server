@@ -112,11 +112,27 @@ sudo ls
 <a name="public-key"></a>
 ### Public Key - in progress
 
-<a name="ssh-copy-id"></a>
-#### ssh-copy-id - in progress
+A good practice to a secure server is to set up public key authentication. What this does is it requires users to have their private SSH key in order to log in.
 
-<a name="manually"></a>
-#### Manually - in progress
+First you must generate a key pair if you do not already have one. This consists of a private key and a public key. If you already have a key then skip ahead to [this](#copy-key) step.
+
+In order to generate a key pair, run this in the command line of your **local** machine:
+```
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/local/.ssh/id_rsa):
+Hit return to accept this file name and path (or enter a new name).
+```
+:grey_exclamation: *Note: Your file path may be different.*
+
+You will be asked for a password to secure the key with, this can also be left blank, it is up to you. If you choose to enter a password, you will need to input this password each time along with the private key when you log in to the server.
+
+This will generate `id_rsa` *(the private key)* as well as `id_rsa.pub` *(the public key)* in the directory which was specified.
+
+:warning: *WARNING: Do not share the private key with anyone who should not have access to your server.*
+
+<a name="copy-key"></a>
+#### Copy Key To Server - in progress
 
 <a name="configuration"></a> 
 ## :computer: Configuration
