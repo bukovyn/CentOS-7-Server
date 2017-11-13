@@ -110,7 +110,7 @@ sudo ls
 :star: *Tip: `sudo su` enables root user mode until disabled with `exit`*.
 
 <a name="public-key"></a>
-### Public Key - in progress
+### Public Key
 
 A good practice to a secure server is to set up public key authentication. What this does is it requires users to have their private SSH key in order to log in.
 
