@@ -49,7 +49,7 @@ The most common and most convenient method for most would be to make a bootable 
   <img src="https://github.com/bukovyn/CentOS-7-Server/blob/master/img/Etcher.gif" alt="Etcher" height="350">
 </p>
 
-With your bootable image mounted on your flash drive, we are ready to begin the setup process. Insert the drive on the machine where you want your server on and boot it up *(or restart it)*. In most cases, we will have to set the boot priority in BIOS so that the system boots from your flash drive rather than from any other existing drives on it. Right as the system is booting there will be a prompt to press some key *(usually `Delete` or `F12` to enter BIOS settings)*. Not every BIOS is the same but changing the booty priority is usually on the main page, make sure your flash drive is first in boot priority, save the adjusted settings and reboot. On reboot you should enter the CentOS setup process.
+With your bootable image mounted on your flash drive, we are ready to begin the setup process. Insert the drive on the machine where you want your server on and boot it up *(or restart it)*. In most cases, we will have to set the boot priority in BIOS so that the system boots from your flash drive rather than from any other existing drives on it. Right as the system is booting there will be a prompt to press some key *(usually `Delete` or `F12` to enter BIOS settings)*. Not every BIOS is the same but changing the boot priority is usually on the main page, make sure your flash drive is first in boot priority, save the adjusted settings and reboot. On reboot you should enter the CentOS setup process.
 <a name="setup"></a> 
 ## :computer: Setup
 
@@ -74,6 +74,8 @@ New password:
 Retype new password:
 passwd: all authentication tokens updated successfully.
 ```
+:grey_exclamation: *Note: In code snippets with more than one line, `$` denotes user input into the command line. It is not part of the command, it is simply there to help distinguish input from output. Lines without `$` are output from the console as a result of the command.*
+
 This will prompt you to type the password twice and now you can [`ssh`](http://www2.stat.duke.edu/comp/security/ssh_man.html) into the server as that user. 
 
 Next, we'll look at how to add root privileges for a specific user.
@@ -81,7 +83,7 @@ Next, we'll look at how to add root privileges for a specific user.
 <a name="root-privileges"></a>
 ### Root Priviliges
 
-What if we need to do administrative tasks on our new user account? This is where root priviliges play their part, instead of switching between a normal user and the root account, we can set up super user priviliges on the `foo` account we made in the previous section. This will allow the user to run commands that would otherwise require root priviliges by putting [`sudo`](https://www.sudo.ws/intro.html) before each command.
+What if we need to do administrative tasks on new user account? This is where root priviliges play their part, instead of switching between a normal user and the root account, we can set up super user priviliges on the `foo` account we made in the previous section. This will allow the user to run commands that would otherwise require root priviliges by putting [`sudo`](https://www.sudo.ws/intro.html) before each command.
 
 To add these priviliges, we will add the user to the [`wheel`](https://en.wikipedia.org/wiki/Wheel_(Unix_term)) group. Conveniently, on CentOS 7, users who belong to the `wheel` group are allowed to use `sudo` by default.
 
@@ -121,7 +123,6 @@ DEVICE  TYPE      STATE      CONNECTION
 enp0s3  ethernet  connected  enp0s3
 lo      loopback  unmanaged  --
 ```
-:grey_exclamation: *Note: In code snippets with more than one line, `$` denotes user input into the command line. It is not part of the command, it is simply there to help distinguish input from output. Lines without `$` are output from the console as a result of the command.*
 
 Great, the system recognizes your ethernet device.
 
@@ -142,7 +143,7 @@ Now lets run the command `nmtui` :
 </p>
 <p align="center"><i>Finally, make sure your IPv4 configuration is set to automatic and "Automatically connect" is checked, finish with "OK"</i></p>
   
-After we exit the `nmtui` interface, lets restart our network by running `service network restart`.
+After we exit the `nmtui` interface, lets restart the network by running `service network restart`.
 
 Now the server will get IP address from [DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol). Verify your IP by running `ip addr` on the command line. Furthermore, we can check if we have an active connection by pinging Google:
 
@@ -176,7 +177,7 @@ vim /etc/hostname
 ```
 :star: *Tip: install `vim` by running `yum -y install vim`. `vim` is an enhanced version of the default `vi` that comes with the operating system.*
 
-To confirm the change, logout and login again and check the new hostname with `echo $HOSTNAME`.
+To confirm the change, logout and log back in and check the new hostname with `echo $HOSTNAME`.
 
 <a name="update-upgrade"></a>
 ### Update & Upgrade
@@ -198,7 +199,7 @@ Although keep in mind the first version of the command is recommended as the `-y
 <a name="ssh"></a> 
 ### SSH
 
-[SSH](https://linux.die.net/man/1/ssh) stands for Secure Shell. It is the default protocol for remote management in Linux and it comes with our minimal install of CentOS.
+[SSH](https://linux.die.net/man/1/ssh) stands for Secure Shell. It is the default protocol for remote management in Linux and it comes with the minimal install of CentOS.
 
 To check the currently installed version:
 
@@ -268,15 +269,7 @@ If you disabled it and need to enable it again, the command is:
 $ systemctl enable firewalld
 $ systemctl start firewalld
 ```
-
 :star: *Tip: You can always check which state the service is in by running the command `firewall-cmd --state`.*
-
-
-
-
-
-
-
 
 <a name="additional-steps"></a> 
 ## :computer: Additional Steps
@@ -287,7 +280,7 @@ $ systemctl start firewalld
 <a name="assumptions"></a> 
 #### Assumptions
 
-The following steps assume that the new drive has been installed and is recognized by the system. A good way to verify this is to enter the BIOS during the system's boot process and ensure that the drive is recognized by the BIOS. If it is not recognized, the BIOS may have a menu option to scan for new drives. If this does not help or the scan for new drives option does not exist on your system, double check the physical aspects of the drive and make sure it is connected properly.
+The following steps assume that the new drive has been installed and is recognized by the system. A good way to verify this is to enter the BIOS during the system's boot process and ensure that the drive is recognized by the BIOS. If it is not recognized, the BIOS may have a menu option to scan for new drives. If this does not help or the scan for new drives option does not exist on your system, check the physical aspects of the drive and make sure it is connected properly.
 
 <a name="finding-your-drive"></a> 
 #### Finding Your Drive
@@ -322,7 +315,7 @@ Running `fdisk`:
 $ Command (m for help):
 ```
 
-`p` shows our drives partitions, as you can see, there are currently none.
+`p` shows the drive's partitions, as you can see, there are currently none.
 ```
 $ Command (m for help): p
 
@@ -372,7 +365,7 @@ Running `ls /dev/sd*` *(the command used to see devices which we ran earlier)*, 
 $ ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/hsdb  /dev/sb1  /dev/sdc
 ```
-The next step is to create a file system on our newly made partition.
+The next step is to create a file system on the newly made partition.
 
 <a name="creating-file-system"></a> 
 #### Creating File System
@@ -381,12 +374,12 @@ The easiest way to create a file system on a partition is to use the [`mkfs.ext3
 ```
 /sbin/mkfs.ext3 -L /mydata /dev/sdb1
 ```
-This will create a file system on the specified disk partition, in our case `/dev/sdb1` with the label "mydata".
+This will create a file system on the specified disk partition, in this case `/dev/sdb1` with the label "mydata".
 
 <a name="mounting-file-system"></a> 
 #### Mounting File System
 
-After we have created the new file system on our disk's partition, we need to mount it in order for it to be accessible to CentOS and its users. For this to be possible, we must create a mount point, which is a directory or folder into which the file system will be mounted. To keep it simple we will create a /mydata directory to match our file system label, keep in mind it is not necessary that these values match:
+After we have created the new file system on the disk's partition, we need to mount it in order for it to be accessible to CentOS and its users. For this to be possible, we must create a mount point, which is a directory or folder into which the file system will be mounted. To keep it simple we will create a `/mydata` directory to match the file system label, keep in mind it is not necessary that these values match:
 ```
 mkdir /mydata
 ```
@@ -408,7 +401,7 @@ Simply run:
 vi /etc/fstab 
 ```
 
-The following is a sample output of the fstab file configured to automount our /mydata partition:
+The following is a sample output of the fstab file configured to automount the `/mydata` partition:
 ```
 $ cat /etc/fstab
 /dev/VolGroup00/LogVol00 /                      ext3    defaults        1 1
