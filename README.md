@@ -111,7 +111,7 @@ sudo ls
 <a name="public-key"></a>
 ### Public Key
 
-A good practice to a secure server is to set up public key authentication. What this does is it requires users to have their private SSH key in order to log in.
+A good practice to a secure server is to set up [public key authentication](https://the.earth.li/~sgtatham/putty/0.55/htmldoc/Chapter8.html). What this does is it requires users to have their private SSH key in order to log in.
 
 First you must generate a key pair if you do not already have one. This consists of a private key and a public key. If you already have a key then skip ahead to [this](#copy-key) step.
 
