@@ -66,8 +66,6 @@ ssh root@SERVER_IP
 ```
 You will most likely get a warning that the authenticity of the host can't be established and if you are sure you want to connect. That is normal, we will set up our key pair in a few steps. Type `yes` and enter your password. 
 
-:grey_exclamation: *Note: If it is your first time logging into the server with a password, you will be prompted to change the root password.*
-
 <a name="new-user"></a>
 ### New User
 
