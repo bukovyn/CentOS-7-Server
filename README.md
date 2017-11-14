@@ -131,7 +131,32 @@ This will generate `id_rsa` *(the private key)* as well as `id_rsa.pub` *(the pu
 :warning: *WARNING: Do not share the private key with anyone who should not have access to your server.*
 
 <a name="copy-key"></a>
-### Copy Key To Server - in progress
+### Copy Key To Server
+
+Assuming the previous step, run this command in your **local** machine:
+```
+cat ~/.ssh/id_rsa.pub
+```
+
+This will output your public key on the command line, copy it to your clipboard.
+
+Next, **on the server**, as `root`, run this command but substitute `user` with the user account you created on the server:
+```
+su - user
+```
+
+You will be in your user's home directory, create a new directory called `.ssh` and change its permissions with the following:
+```
+$ mkdir .ssh
+$ chmod 700 .ssh
+```
+
+Next, make a file called `authorized_keys` in your new `.ssh` directory:
+```
+vi .ssh/authorized_keys
+```
+
+Paste your public key into the file, save and quit `vi`. Type `exit` to return to the root user. You can now SSH login using the private key as authentication.
 
 <a name="configuration"></a> 
 ## :computer: Configuration
