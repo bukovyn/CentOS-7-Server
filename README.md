@@ -115,7 +115,7 @@ A good practice to a secure server is to set up [public key authentication](http
 
 First you must generate a key pair if you do not already have one. This consists of a private key and a public key. If you already have a key then skip ahead to [this](#copy-key) step.
 
-In order to generate a key pair, run this in the command line of your **local** machine:
+In order to generate a key pair, run the following in the command line of your **local** machine:
 ```
 $ ssh-keygen
 Generating public/private rsa key pair.
